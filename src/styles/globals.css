@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: inter, Helvetica, sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.btn--red {
+  @apply bg-redPrimary text-whitePrimary rounded-md font-light hover:bg-red-500;
+}
+
+.number-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.passing-animation {
+  animation: passing 20s linear infinite;
+}
+
+@keyframes passing {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
